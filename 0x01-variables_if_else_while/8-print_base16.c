@@ -6,19 +6,16 @@
  */
 int main(void)
 {
-unsigned char a = '0';
-int 1;
-for (1 = 0; 1 < 10; 1++)
+char ch;
+int n;
+for (n = 48; n <= 57; n++)
 {
-putchar(a);
-a++;
+putchar(n);
 }
-a = '1';
-for (1 = 0; 1 < 0; 1++)
+for (ch = 'a'; ch <= 'f'; ch++)
 {
-putchar('0' + a);
-a++;
+putchar(ch);
 }
-putchar('\n');
+putchar(10);
 return (0);
 }
