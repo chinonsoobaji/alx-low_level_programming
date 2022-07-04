@@ -8,8 +8,8 @@
 int main(void)
 {
 int var;
-for (var = 0; var < 99; var++)
 int ii;
+for (var = 0; var < 99; var++)
 for (ii = var + 1; ii < 100; ii++)
 {
 putchar((var / 10) + '0');
@@ -24,7 +24,6 @@ putchar(' ');
 }
 else
 continue;
-}
 }
 putchar('\n');
 return (0);
