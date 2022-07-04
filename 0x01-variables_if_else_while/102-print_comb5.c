@@ -1,29 +1,29 @@
 #include<stdio.h>
 /**
- * main - entry point
+ * main - Entry point
  *
- * Return: Always returns 0
+ * Return: 0 if Successful
  */
 int main(void)
 {
-int i, j;
-for (i = 0; i < 100; i++)
+int var;
+for (var = 0; var < 99; var++)
 {
-for (i = j; j < 100; j++)
+int ii;
+for (ii = var + 1; ii < 100; ii++)
 {
-if (i < j)
-{
-putchar(i / 10 + 48);
-putchar(i % 10 + 48);
+putchar((var / 10) + '0');
+putchar((var % 10) + '0');
 putchar(' ');
-putchar(j / 10 + 48);
-putchar(j % 10 + 48);
-if (i != 98 || j != 99)
+putchar((ii / 10) + '0');
+putchar((ii % 10) + '0');
+if (var != 99)
 {
 putchar(',');
 putchar(' ');
 }
-}
+else
+continue;
 }
 }
 putchar('\n');
