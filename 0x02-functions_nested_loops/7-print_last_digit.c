@@ -5,12 +5,12 @@
  * @n: The passed args
  *Return: The last digit
  */
-int print_last_digit(void)
+int print_last_digit(int n)
 {
 	int x;
 
 	if (n < 0)
-		n = -n
+		n = -n;
 			x = n % 10;
 	_putchar(x + '0');
 	return (x);
