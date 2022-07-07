@@ -1,22 +1,16 @@
 #include "main.h"
 /**
- *print_to_98 - Prints all natural numbers from input to 98,
- *                    in order separated by a comma followed by a space.
- *@n: The number to begin counting at.
+ *print_last_digit - prints the last digit of a numer.
+ *@n: digit to find the last place of.
+ *
+ *Return: The last digit.
  */
-void print_to_98(int n)
+int print_last_digit(int n)
 {
+int last_digit = n % 10;
 
-if (n >= 98)
-{
-while (n > 98)
-printf("%d, ", n--);
-printf("%d\n", n);
-}
-else
-{
-while (n < 98)
-printf("%d, ", n++);
-printf("%d\n", n);
-}
+if (last_digit < 0)
+last_digit *= -1;
+_putchar(last_digit + '0');
+return (last_digit);
 }
