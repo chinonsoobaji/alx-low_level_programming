@@ -8,14 +8,18 @@
  * Return: 0 is success.
  */
 
-int _strlen_recursion(char *s);
+int _strlen_recursion(char *s)
 {
-int len = 0;
+int c;
 
-if (*s)
+if (*s == '\0')
 {
-len++;
-len += _strlen_recursion(s + 1);
+return (0);
 }
-return (len);
+else
+{
+c = _strlen_recursion(s + 1);
 }
+return (c + 1);
+}
+
