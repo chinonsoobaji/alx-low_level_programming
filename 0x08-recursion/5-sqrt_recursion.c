@@ -21,3 +21,14 @@ if (corre == n * n)
 return (n);
 return (-1);
 }
+/**
+ * _sqrt_recursion - return de square root of a natural number
+ *
+ * @n: to check
+ *
+ * Return: the square root or -1 if it does not have
+ */
+int _sqrt_recursion(int n)
+{
+return (_alcuadrado(n, 0));
+}
