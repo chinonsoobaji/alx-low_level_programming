@@ -1,26 +1,13 @@
-#include "holberton.h"
+#include "main.h"
+
 /**
- * print_binary - Function that prints the binary representation of a number.
- * @n: Number to convert.
+ * print_binary - function that prints the binary representation of a number
+ * @n: number to be printed in binary
  */
 void print_binary(unsigned long int n)
 {
-	unsigned long int i, a = 1, flag = 0, p, b;
+	if (n > 1)
+		print_binary(n >> 1);
 
-	if (n == 0)
-	{
-		_putchar(48);
-		return;
-	}
-	for (i = 0; i < 64; i++)
-	{
-		p = ((a << (63 - i)) & n);
-		if (p >> (63 - i))
-			flag = 1;
-		if (flag != 0)
-		{
-			b = p >> (63 - i);
-			_putchar(b + 48);
-		}
-	}
+	_putchar((n & 1) + '0');
 }

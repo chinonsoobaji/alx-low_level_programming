@@ -1,16 +1,18 @@
-#include "holberton.h"
+#include "main.h"
+
 /**
- * set_bit - function that sets the value of a bit to 1 at a given index.
- * @n: Number to convert.
- * @index:  is the index, starting from 0 of the bit you want to get.
- * Return: the value of the bit at index index or -1 if an error occured.
+ * set_bit - gets bit on index `index`
+ * @n: decimal number
+ * @index: index of the bit
+ * Return: 1 (success) or -1(faillure)
  */
+
 int set_bit(unsigned long int *n, unsigned int index)
 {
-	unsigned long int a = 1;
-
-	if (index > 64)
+	if (index >= (sizeof(unsigned long int) * 8))
 		return (-1);
-	*n = a << index | *n;
+
+	*n ^= (1 << index);
+
 	return (1);
 }
